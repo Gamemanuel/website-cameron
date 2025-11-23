@@ -52,3 +52,17 @@ export const gridItems = [{
     description: "I value diversity and inclusivity. My content is created with the intention of being respectful to all individuals, regardless of their background, ethnicity, gender, or beliefs. Please do not provide me with material that you know isn't meant for me.",
     className: "md:col-span-6 md:row-span-4",
 },];
+
+// TODO:// get cameron's actual socials and add them here
+export const socialMedia = [
+    {
+        id: 1,
+        img: "/git.svg",
+        url: "https://www.gitlab.com/",
+    },
+    {
+        id: 2,
+        img: "/twit.svg",
+        url: "https://twitter.com/",
+    },
+];

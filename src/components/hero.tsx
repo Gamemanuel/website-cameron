@@ -35,7 +35,7 @@ const Hero = () => {
                         <div className="md:w-[600px] sm:w-[400px]">
                             <TextGenerateEffect
                                 words="Demos"
-                                className=" text-[40px] md:text-5xl lg:text-6xl mb-5 mt-0 pt-0"
+                                className=" text-[40px] md:text-5xl lg:text-6xl pt-0 flex justify-center lg:flex-none lg:justify-start mt-10 md:mt-0"
                             />
                             <div className="w-full md:w-[600px] space-y-6 pb-0 mb-0">
                                 <AudioPlayer track={ELearningDemo}/>
