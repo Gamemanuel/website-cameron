@@ -16,7 +16,6 @@ export const FloatingNav = ({
     navItems: {
         name: string;
         link: string;
-        icon?: JSX.Element;
     }[];
     className?: string;
 }) => {
@@ -27,18 +26,15 @@ export const FloatingNav = ({
 
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         // Check if current is not undefined and is a number
-        if (typeof current === "number") {
-            let direction = current! - scrollYProgress.getPrevious()!;
-
-            if (scrollYProgress.get() < 0.05) {
-                // also set true for the initial state
+        const direction = current! - scrollYProgress.getPrevious()!;
+        if (scrollYProgress.get() < 0.05) {
+            // also set true for the initial state
+            setVisible(true);
+        } else {
+            if (direction < 0) {
                 setVisible(true);
             } else {
-                if (direction < 0) {
-                    setVisible(true);
-                } else {
-                    setVisible(false);
-                }
+                setVisible(false);
             }
         }
     });
